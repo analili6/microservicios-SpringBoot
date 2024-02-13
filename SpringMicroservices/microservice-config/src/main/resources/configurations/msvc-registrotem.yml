@@ -1,0 +1,24 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: msvc-registrotem
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3312/msvc_ixchel_db
+    username: ixchel1_db
+    password: ixchel1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
